@@ -1,18 +1,8 @@
-import TextField from '@mui/material/TextField'
-import { SxProps, Theme } from '@mui/material/styles';
-
-type Props = {
-  id?: string;
-  label?: string;
-  text: string;
-  setText: (value: string) => void;
-  variant?: 'filled' | 'outlined' | 'standard';
-  placeholder?: string;
-  sx?: SxProps<Theme>;
-};
+import TextField from '@mui/material/TextField';
+import TextFieldPropsType from '@/types/TextFieldProps';
 
 // テキストの入力
-export const UsernameTextBox = (props: Props) => {
+export const MultipleTextField = (props: TextFieldPropsType) => {
   return (
     <>
       <TextField 
@@ -28,4 +18,4 @@ export const UsernameTextBox = (props: Props) => {
   )
 }
 
-export default UsernameTextBox;
+export default MultipleTextField;
