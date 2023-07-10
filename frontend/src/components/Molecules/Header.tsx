@@ -30,8 +30,17 @@ const Header = () => {
           <Box>
             <MultipleButton text="作成" variant="outlined" color="inherit" startIcon={<BorderColorIcon />} 
               handleClick={() => window.location.href='/threadwrite'}/>
-            <MultipleIconButton icon={<AccountCircleIcon/>} size="large" color="inherit"
+              {/* ログインの条件、ログインボタンのアクション */}
+            if(){
+              // ログインしていたらアカウントボタンを表示
+              <MultipleIconButton icon={<AccountCircleIcon/>} size="large" color="inherit"
               handleClick={() => window.location.href='/id'}/>
+            }else{
+              // ログインしていなかったらLOGINの文字を表示
+              <Box>
+              <MultipleButton text="LOGIN" variant="outlined" color="inherit" 
+              handleClick={() => }/>
+            }
           </Box>
         </Toolbar>
       </AppBar>
